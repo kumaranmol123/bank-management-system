@@ -1,86 +1,104 @@
 # 🏦 Full-Stack Cloud Bank Management System
 
-A production-ready, secure, and robust web application simulating modern banking operations. Built natively using the **Java EE** ecosystem following the **MVC (Model-View-Controller) Architecture**, this application has been migrated from a local `localhost` development environment to a fully live cloud-hosted pipeline.
+A **production-ready full-stack banking web application** that simulates modern banking operations such as user authentication, account creation, deposits, withdrawals, fund transfers, and transaction history.
 
-🚀 **[Live Demo Link](https://bank-management-system1-3bmb.onrender.com)** 🖥️ *Note: For the optimized visual layout, please view this application on a desktop browser or switch to "Desktop Site" mode on your mobile browser.*
+The application is built using the **Java EE ecosystem** following the **MVC (Model-View-Controller) architecture** and migrated from a local development environment to a **cloud-hosted deployment pipeline**.
 
----
 
-## 🛠️ Tech Stack & Architecture
+## 🚀 Live Demo
 
-* **Backend Engine:** Java Servlets, Core Java (OOPs, Exceptions, Collections)
-* **Design Pattern:** MVC (Model-View-Controller) Architecture
-* **Presentation Layer:** JSP (JavaServer Pages), JSTL (JSP Standard Tag Library), HTML5, CSS3
-* **Data Layer:** MySQL, JDBC (Java Database Connectivity)
-* **Build & Dependancy Management:** Apache Maven
-* **Cloud Infrastructure & DevOps:** Render (Web Service Hosting), Clever Cloud (Cloud Managed MySQL)
+🔗 https://bank-management-system-anmol.onrender.com
+
+> **Best viewed on a desktop browser.**
 
 ---
 
-## 📈 System Architecture & Data Flow
+## 🛠️ Tech Stack
 
-The application strictly separates concerns across decoupled layers to maximize maintainability and scalability:
-
-1. **View Layer (JSP & JSTL):** Handles the presentation. JSTL tags are leveraged extensively to eliminate raw Java scriptlets, ensuring clean, maintainable UI scripts.
-2. **Controller Layer (Java Servlets):** Acts as the centralized traffic director. Intercepts incoming HTTP requests, processes business logic, and manages session state.
-3. **Model Layer (JDBC/MySQL):** Handles persistent application data. Connects to a cloud-hosted relational database via secure, pooling JDBC drivers.
-
- [ Client Browser ] <───HTTP Requests/Responses───> [ Java Servlets (Controller) ]
-│
-(Processes Logic)
-│
-▼
-[ Client UI (JSP / JSTL) ] <────Binds Data──── [ MySQL Database (Model Layer) ]
+- **Backend:** Java, Java Servlets, JDBC
+- **Frontend:** JSP, JSTL, HTML5, CSS3
+- **Database:** MySQL
+- **Build Tool:** Apache Maven
+- **Cloud:** Render, Clever Cloud
 
 ---
 
-## ✨ Core Features
+## 🏗️ Architecture
 
-* **Secure User Lifecycle Onboarding:** Secure registration and login workflows backed by HTTP session validations to prevent unauthorized page access.
-* **Dynamic Account Creation:** Authenticated users can instantly generate a unique checking/savings account linked directly to their profile.
-* **Core Banking Transactions:** Real-time processing for dynamic balance updates including **Deposits**, **Withdrawals**, and **Account-to-Account Balance Transfers**.
-* **Comprehensive Transaction History:** Dynamic, tabular audit trail rendering past transaction types, target accounts, amounts, and dates using JSTL loops.
-* **Defensive Error Handling:** Dedicated routing configurations for transaction failures, missing routes (404s), and input validations.
+The project follows the **MVC Architecture**:
+
+```text
+Client
+   │
+   ▼
+JSP + JSTL (View)
+   │
+   ▼
+Java Servlets (Controller)
+   │
+   ▼
+JDBC + MySQL (Model)
+```
 
 ---
 
-## ⚙️ DevOps & Cloud Migration Journey
+## ✨ Features
 
-Transitioning this project from a local machine to a live web environment involved resolving key infrastructure challenges:
-
-* **Continuous Deployment (CD) Pipeline:** Integrated GitHub webhooks with Render to automate background builds via Maven upon every code push.
-* **Environment Configuration Isolation:** Secured sensitive production credentials (database URLs, passwords) completely outside the codebase using system environment variables (`System.getenv()`).
-* **Cross-Cloud Networking:** Migrated local MySQL instances onto a remote cloud database infrastructure, configuring robust connection strings to handle secure cross-network database requests.
+- 🔐 User Registration & Login
+- 🏦 Create Bank Account
+- 💰 Deposit Money
+- 💸 Withdraw Money
+- 🔄 Fund Transfer
+- 📜 Transaction History
+- 🛡️ Session Management
+- ✅ Input Validation
+- ☁️ Cloud Deployment
 
 ---
 
-## 🚀 How to Run and Test the Demo
+## ☁️ Deployment
 
-To test the live banking system smoothly, follow this onboarding order:
+- Hosted on **Render**
+- Cloud MySQL using **Clever Cloud**
+- Environment Variables for secure credentials
+- Maven-based deployment pipeline
 
-1. Navigate to the **Live Demo Link**.
-2. Click **Register** on the login screen to set up a brand-new user profile.
-3. Log into your dashboard and click **Create Account** to initialize your dynamic banking profile.
-4. Perform your first transaction (e.g., make a deposit or simulate an internal fund transfer).
-5. Existing Bank Account Numbers: 10000100, 10000101
 ---
 
-## 📦 Local Setup Instructions
+## 🚀 Run Locally
 
-To run this project locally on your machine using an IDE (like NetBeans or Eclipse):
+```bash
+git clone https://github.com/kumaranmol123/bank-management-system.git
+```
 
-1. **Clone the repository:**
-   ```bash
-Configure Database:
-Import the project SQL schema into your local MySQL instance.
+1. Import the MySQL database.
+2. Configure `DB_URL`, `DB_USER`, and `DB_PASSWORD`.
+3. Build the project:
 
-Set Environment Variables:
-Set up your local system variables for DB_URL, DB_USER, and DB_PASSWORD.
+```bash
+mvn clean install
+```
 
-Build and Run:
-Clean and build the project via Maven, and deploy it onto a local application server (like GlassFish or Tomcat).
+4. Deploy on Apache Tomcat.
 
-👤 Author
-Kumar Anmol- B.Tech Student & Software Developer
+---
 
-Let's connect on LinkedIn!  (https://www.linkedin.com/in/kumar-anmol123)
+## 📌 Demo Steps
+
+1. Register a new user.
+2. Log in.
+3. Create a bank account.
+4. Perform deposits, withdrawals, or transfers.
+5. View transaction history.
+
+---
+
+## 👨‍💻 Author
+
+**Kumar Anmol**  
+B.Tech Computer Science Engineering Student
+
+🔗 LinkedIn:  
+https://www.linkedin.com/in/kumar-anmol123
+
+⭐ If you found this project useful, consider giving it a star!
