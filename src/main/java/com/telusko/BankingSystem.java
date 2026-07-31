@@ -13,11 +13,11 @@ public class BankingSystem{
             Class.forName("com.mysql.cj.jdbc.Driver");
             
             // 💡 Pull credentials securely from the operating system environment
-            String dbUrl = "jdbc:mysql://localhost:3306/Bank_Management";         
-            String dbUser = "root";       
-            String dbPassword ="Leet79leet@" ; 
+            String url = System.getenv("DB_URL");
+            String username = System.getenv("DB_USERNAME");
+            String password = System.getenv("DB_PASSWORD");
             
-            return DriverManager.getConnection(dbUrl, dbUser, dbPassword);
+            return DriverManager.getConnection(Url, username, password);
         } catch (Exception e) {
             e.printStackTrace();
             throw new SQLException("Database Connection Failed!");
