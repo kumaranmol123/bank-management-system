@@ -4,15 +4,6 @@ A **production-ready full-stack banking web application** that simulates modern 
 
 The application is built using the **Java EE ecosystem** following the **MVC (Model-View-Controller) architecture** and migrated from a local development environment to a **cloud-hosted deployment pipeline**.
 
-
-## 🚀 Live Demo
-
-🔗 https://bank-management-system-anmol.onrender.com
-
-> **Best viewed on a desktop browser.**
-
----
-
 ## 🛠️ Tech Stack
 
 - **Backend:** Java, Java Servlets, JDBC
